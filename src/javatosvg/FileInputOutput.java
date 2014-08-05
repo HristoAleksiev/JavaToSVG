@@ -78,7 +78,7 @@ public class FileInputOutput {
     public void initiallizeWithHtmlTemplate(){
         if (fileContent.isEmpty()) {
             String htmlTemplatePath = 
-                    "C:\\Java\\Training\\SVG Test\\html_template.html";
+                    "C:\\GitRepos\\JavaToSVG\\Templates\\html_template.html";
             String line;
             Path templatePath = Paths.get(htmlTemplatePath);
 

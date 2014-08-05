@@ -1,7 +1,7 @@
 package javatosvg;
 
 public class Renderer {
-    private final String filePath = "C:\\Java\\Training\\SVG Test\\SVg.html";
+    private final String filePath = "C:\\GitRepos\\JavaToSVG\\Output\\svg_ready.html";
     FileInputOutput file = new FileInputOutput(filePath);
     
     public Renderer(){
