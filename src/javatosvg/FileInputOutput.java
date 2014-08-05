@@ -62,11 +62,6 @@ public class FileInputOutput {
         }
     }
     
-    public void writeOnLine(String content, int line){
-        fileContent.add(line, content);
-        writeToFile(fileContent);
-    }
-    
     public void writeStuff(String content){
         int lineNum = 6;
         
