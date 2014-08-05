@@ -6,6 +6,11 @@ public class Renderer {
     
     public Renderer(){
         file.initiallizeWithHtmlTemplate();
+    
+        // Will leave this incomplete for now,
+        // html implies that a closing tag is present,
+        // even there isn't
+        file.writeStuff(Tags.SVG(SVG.Open));
     }
     
     public void draw(String str){

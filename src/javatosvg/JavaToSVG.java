@@ -5,10 +5,6 @@ public class JavaToSVG {
         Forms drawStuff = new Forms();
         Renderer render = new Renderer();
         
-        // Open SVG tag !!!
-        
-        render.draw(Tags.open(0, 0, 700, 700));
-        
         // Create lines
         
             // Horizontal:
@@ -57,9 +53,5 @@ public class JavaToSVG {
         
         render.draw(drawStuff.blackCircle(new Point(165, 85)));
         render.draw(drawStuff.greyCircle(new Point(10, 20)));
-        
-        // Close SVG tag !!!
-        
-        render.draw(Tags.close());
     }
 }
