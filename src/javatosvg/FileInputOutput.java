@@ -12,6 +12,7 @@ public class FileInputOutput {
   
     private String path;
     private List<String> fileContent;
+    private boolean isFileEmprtyAtStart;
     
     public Path get_path(){
         return Paths.get(path);
@@ -25,10 +26,17 @@ public class FileInputOutput {
     private void set_content(List<String> value){
         fileContent = value;
     }
+    private void set_fileState(){
+        isFileEmprtyAtStart = fileContent.isEmpty();
+    }
+    public boolean get_fileState(){
+        return isFileEmprtyAtStart;
+    }
     
     public  FileInputOutput(String path){
         set_path(path);
         set_content(readFile());
+        set_fileState();
     }
     
     private List<String> readFile(){
@@ -83,7 +91,7 @@ public class FileInputOutput {
     }
     
     public void initiallizeWithHtmlTemplate(){
-        if (fileContent.isEmpty()) {
+        if (isFileEmprtyAtStart) {
             String htmlTemplatePath = 
                     "C:\\GitRepos\\JavaToSVG\\Templates\\html_template.html";
             String line;

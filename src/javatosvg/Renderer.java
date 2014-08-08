@@ -10,12 +10,16 @@ public class Renderer {
         // Will leave this incomplete for now,
         // html implies that a closing tag is present,
         // even there isn't
-        file.writeOnLine(Tags.SVG(SVG.Open), 6);
-        file.writeOnLine("\t\n", 7);
-        file.writeOnLine(Tags.SVG(SVG.Close), 8);
+        if (file.get_fileState()) {
+            file.writeOnLine(Tags.SVG(SVG.Open), 6);
+            file.writeOnLine("\t\n", 7);
+            file.writeOnLine(Tags.SVG(SVG.Close), 8);
+        }
     }
     
     public void draw(String str){
-        file.writeStuff(str);
+        if (file.get_fileState()) {
+            file.writeStuff(str);
+        }
     }
 }
