@@ -20,7 +20,7 @@ public class Tags {
         }
         else if (tag == SVG.Close) {
             build.delete(0, build.length());            
-            build.append("</svg> \n");
+            build.append("</svg>");
         }
         
         return build.toString();
