@@ -10,14 +10,14 @@ import java.util.*;
 
 public class FileInputOutput {
   
-    private String path;
+    private static String path;
     private List<String> fileContent;
     private boolean isFileEmprtyAtStart;
     
-    public Path get_path(){
+    public static Path get_path(){
         return Paths.get(path);
     }
-    private void set_path(String value){
+    public static void set_path(String value){
         path = value;
     }
     public List<String> get_content(){
@@ -34,7 +34,6 @@ public class FileInputOutput {
     }
     
     public  FileInputOutput(String path){
-        set_path(path);
         set_content(readFile());
         set_fileState();
     }
