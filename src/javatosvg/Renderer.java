@@ -1,10 +1,12 @@
 package javatosvg;
 
 public class Renderer {
-    private final String filePath = "C:\\GitRepos\\JavaToSVG\\Output\\svg_ready.html";
-    FileInputOutput file = new FileInputOutput(filePath);
+    FileInputOutput file = new FileInputOutput();
     
     public Renderer(){
+    }
+    
+    public void buildSVG(){
         file.initiallizeWithHtmlTemplate();
     
         if (file.get_fileState()) {

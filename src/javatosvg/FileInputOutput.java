@@ -10,12 +10,15 @@ import java.util.*;
 
 public class FileInputOutput {
   
-    private static String path;
+    private static String path = null;
     private List<String> fileContent;
     private boolean isFileEmprtyAtStart;
     
-    public static Path get_path(){
+    public static Path get_path(){        
         return Paths.get(path);
+    }
+    public static String get_path_asString(){
+        return path;
     }
     public static void set_path(String value){
         path = value;
@@ -31,6 +34,9 @@ public class FileInputOutput {
     }
     public boolean get_fileState(){
         return isFileEmprtyAtStart;
+    }
+    
+    public FileInputOutput(){
     }
     
     public  FileInputOutput(String path){
